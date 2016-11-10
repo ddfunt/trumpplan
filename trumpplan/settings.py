@@ -55,7 +55,7 @@ ROOT_URLCONF = 'trumpplan.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['blog/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,5 +124,6 @@ STATIC_URL = '/static/'
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
 MEDIA_ROOT = u'/home/diracdeltafunct/trumpplan/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/diracdeltafunct/trumpplan/static'
+STATIC_ROOT = os.path.join(os.path.expanduser('~'), 'trumpplan', "static")
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (BASE_DIR, 'static')

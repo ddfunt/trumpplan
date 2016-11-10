@@ -1,0 +1,43 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+<body >
+<div id="flashingtext">WONT WORK</div>
+
+
+</body>
+
+<script type="text/javascript">
+function flashtext(ele,col) {
+    var tmpColCheck = document.getElementById( ele ).style.color;
+
+      if (tmpColCheck === 'black') {
+        document.getElementById( ele ).style.color = col;
+      } else {
+        document.getElementById( ele ).style.color = 'black';
+      }
+    }
+
+function flash_background(col){
+    var tmpColCheck = document.body.style.background;
+    if (tmpColCheck === 'red') {
+        document.body.style.background = col;
+      } else {
+        document.body.style.background = 'red';
+      }
+}
+
+function flash_stuff() {
+    setInterval(function() {
+        flashtext('flashingtext','white');
+        flash_background('blue');
+        flashtext('flashingtext3','green');
+    }, 200 )
+}
+flash_stuff();
+</script>
+{% endblock %}
+
+
+

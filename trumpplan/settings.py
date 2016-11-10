@@ -55,7 +55,8 @@ ROOT_URLCONF = 'trumpplan.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['blog/templates'],
+        'DIRS': ['blog/templates',
+                 'trumpplan/blog/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -10,6 +10,7 @@
 
 <body>
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 <!-- trump -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:728px;height:90px"
@@ -18,6 +19,27 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<div class="title"><h1>A critical look at Trump's 100 day plan</h1></div>
+
+
+<div id="menu">
+    <a href="/">Home</a>&ensp;
+{% for key,value in pages.items %}
+    <a href="/sections/{{ key }}/">{{key}}</a>&ensp;
+
+{% endfor %}
+    </div>
+
+
+</div>
+    </section>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<br>
+<div class="post">
 {% block content %}{% endblock %}
+    </div>
 </body>
 </html>

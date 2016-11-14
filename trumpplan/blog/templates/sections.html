@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+<h2>{{data.full}}</h2><br>
+{% for link in data.pages %}
+<a href="/sections/{{category}}/{{link}}">{{link}}</a><br>
+
+{% endfor %}
+
+
+{% endblock %}

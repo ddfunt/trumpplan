@@ -7,3 +7,39 @@
     font-size: 500%;
 
 }
+
+.h1{
+    text-align: center;
+}
+.title{
+
+    color:black;
+    background-image: url(banner.jpg);
+
+    text-align: center;
+    background-size: 1920px 380px;
+    height: 380px;
+    line-height:380px;
+    -webkit-text-stroke: 2px white;
+    font-size: 300%;
+}
+.h2{
+    color:black;
+    text-align: center;
+}
+
+.post{
+
+    width: 60%;
+    margin: 0 auto;
+}
+
+#menu{
+    width: 80%;
+    margin: 0 auto;
+    background-color: lightblue;
+    font-size: 200%;
+    text-align: center;
+    /*text-justify: inter-word;*/
+}
+

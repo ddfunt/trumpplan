@@ -16,10 +16,21 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import TemplateView
+from .blog import views
 
 
 urlpatterns = [
-    url(r'^$', include('blog.urls')),
-    url(r'^admin/', admin.site.urls),
+
+    url(r'^$', views.index, name='index'),
+    url(r'^index$', views.index, name='index'),
+    url(r'^test', views.index),
+    url(r'^sections/(?P<key>[a-zA-Z ].+)/(?P<val>[a-zA-Z ].+)/$',
+        views.load_article,
+        name='section_loader'),
+    url(r'^sections/(?P<key>[a-zA-Z ].+/$)',
+        views.load_section,
+        name='index_flash'),
+    #url(r'^sections/(?P<key>[\w.@+-]+)/(?P<value>[\w.@+-]+)', views.load_article, ),
+
     url(r'^robots\.txt/$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain'))
 ]

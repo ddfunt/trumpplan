@@ -14,7 +14,6 @@ from . import posts
 pages = OrderedDict([
     ("Clean up DC",{
         "full": 'Measures to clean up the corruption and special interest collusion in Washington, DC',
-        "link":"test",
      'pages':[
         "Term Limits",
         "Hiring Freeze",
@@ -24,7 +23,6 @@ pages = OrderedDict([
     ]}),
     ("American Workers", {
         "full": 'Protect American workers',
-        "link":"test",
      'pages':[
         "NAFTA",
         "TPP",
@@ -36,10 +34,25 @@ pages = OrderedDict([
     ]}),
     ("Security & Law", {
         "full": 'Actions to restore security and the constitutional rule of law',
-        "link":"test",
-     'pages':[
+     'pages':['Executive Actions',
+              'Supreme Court',
+              'Sanctuary Cities',
+              'Immigrant Deportation',
+              'Immigration Suspension'
 
-    ]})
+    ]}),
+    ('Legislation',{
+     'full': "Next, I will work with Congress to introduce the following Legislative measures",
+    'pages':["Middle Class Tax Relief",
+             'End Offshoring Act',
+             'American Energy & Infrastructure Act',
+             'School Choice and Opportunity Act',
+             'Repeal & Replace Obamacare Act',
+             'Affordable Childcare and Eldercare Act',
+             'End Illegal Immigration Act ("The Wall")',
+             'Restoring Community Safety Act',
+             'Restoring National Security Act',
+             'Clean up Corruption in Washington Act']})
 ])
 
 def my_redirect(request):

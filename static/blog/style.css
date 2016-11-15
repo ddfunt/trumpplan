@@ -36,10 +36,38 @@
 
 #menu{
     width: 80%;
-    margin: 0 auto;
+    margin: 3px auto;
+    height: 80px;
+    line-height: 80px;
+    left: 50%;
     background-color: lightblue;
     font-size: 200%;
     text-align: center;
+    outline: 3px solid darkblue;
     /*text-justify: inter-word;*/
 }
 
+/* unvisited link */
+a:link {
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* mouse over link */
+#menu a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+/* selected link */
+#menu a:active {
+    color: darkblue;
+    text-decoration: none;
+
+}

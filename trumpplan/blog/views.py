@@ -2,14 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponsePermanentRedirect
 from django.core.urlresolvers import reverse
 
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response
 # Create your views here.
 #from .models import Blog, Category
 
-from django.http import HttpResponse
-
 from collections import OrderedDict
-from . import posts
+from trumpplan.blog.templates import posts
 
 pages = OrderedDict([
     ("Clean up DC",{
@@ -76,12 +74,13 @@ def load_article(request, key, val):
     post_text = posts.get_post(val)
 
     if not post_text:
-        return render_to_response('coming_soon.html', {'data':val,
-                                                       'pages':pages})
+        template = 'coming_soon.html'
     else:
-        return render_to_response('article.html',{'data':val,
-                                                  'pages':pages})
-
+        template = post_text# 'posts/' + val
+    print(template)
+    return render_to_response('article.html', {'data':val,
+                                                   'pages':pages,
+                                               'template_name': template})
 
 def index(request):
     return render_to_response('homepage.html', {'pages':pages})

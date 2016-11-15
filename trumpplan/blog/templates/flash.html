@@ -1,8 +1,7 @@
-{% extends "base_generic.html" %}
-
-
-{% block content %}
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
 <body >
+
 <div id="flashingtext">WONT WORK</div>
 
 
@@ -37,7 +36,7 @@ function flash_stuff() {
 }
 flash_stuff();
 </script>
-{% endblock %}
+
 
 
 

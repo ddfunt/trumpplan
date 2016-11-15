@@ -23,6 +23,7 @@ urlpatterns = [
 
     url(r'^$', views.index, name='index'),
     url(r'^index$', views.index, name='index'),
+    url(r'^maga/$', views.index_flash, name='indexflash'),
     url(r'^test', views.index),
     url(r'^sections/(?P<key>[a-zA-Z ].+)/(?P<val>[a-zA-Z ].+)/$',
         views.load_article,
